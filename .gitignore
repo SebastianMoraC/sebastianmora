@@ -1,1 +1,27 @@
 claude_design
+
+# build output
+dist/
+.astro/
+.vercel/
+.output/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment
+.env
+.env.production
+.env.development.local
+.env.local
+
+# editor
+.DS_Store
+.idea/
+*.swp
