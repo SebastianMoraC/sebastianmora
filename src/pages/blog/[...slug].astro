@@ -1,0 +1,58 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Container from '../../components/layout/Container.astro';
+import Aside from '../../components/layout/Aside.astro';
+
+type Post = CollectionEntry<'blog'>;
+
+export async function getStaticPaths() {
+  const posts = (await getCollection('blog', ({ data }: Post) => !data.draft)) as Post[];
+  return posts.map((post: Post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: Post;
+}
+
+const { post } = Astro.props as Props;
+const { Content } = await render(post);
+
+const formatted = post.data.pubDate.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout title={`${post.data.title} — Sebastián Mora Carmona`} description={post.data.description}>
+  <Container>
+    <Aside />
+    <main class="pf-main">
+      <article class="pf-section" style="margin-top: 24px;">
+        <header style="display: flex; flex-direction: column; gap: 8px;">
+          <div class="pf-post-date">{formatted}</div>
+          <h1 style="font-size: 44px; line-height: 1.1; letter-spacing: -0.03em; margin: 0; color: var(--fg);">
+            {post.data.title}
+          </h1>
+          {post.data.description && (
+            <p style="color: var(--fg-2); font-size: 18px; max-width: 640px; margin: 8px 0 0;">
+              {post.data.description}
+            </p>
+          )}
+        </header>
+
+        <div class="pf-prose">
+          <Content />
+        </div>
+
+        <div style="margin-top: 32px;">
+          <a class="pf-btn" href="/blog">← All posts</a>
+        </div>
+      </article>
+    </main>
+  </Container>
+</BaseLayout>

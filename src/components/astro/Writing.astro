@@ -1,0 +1,25 @@
+---
+import { writing } from '../../data/talks';
+import { social } from '../../data/site';
+import SectionHead from './SectionHead.astro';
+---
+
+<section id="writing" class="pf-section">
+  <SectionHead num="05" title="Writing" />
+  <div class="pf-writing">
+    {
+      writing.map((w) => (
+        <a
+          class="pf-post"
+          href={w.href ?? social.linkedin}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div class="pf-post-date">{w.date}</div>
+          <div class="pf-post-title">{w.title}</div>
+          <div class="pf-post-where">{w.where}</div>
+        </a>
+      ))
+    }
+  </div>
+</section>

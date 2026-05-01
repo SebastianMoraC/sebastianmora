@@ -1,0 +1,23 @@
+---
+import { site, social } from '../../data/site';
+import SectionHead from './SectionHead.astro';
+import Footer from './Footer.astro';
+---
+
+<section id="contact" class="pf-section pf-contact">
+  <SectionHead num="07" title="Contact" />
+  <h2>Let's build <span>something</span>.</h2>
+  <div class="pf-contact-mail">
+    <a href={social.email}>{site.email}</a>
+  </div>
+  <div class="pf-cta-row">
+    <a class="pf-btn primary" href={social.email}>
+      Send a note <span class="arrow">↗</span>
+    </a>
+    <a class="pf-btn" href={social.linkedin} target="_blank" rel="noreferrer">
+      LinkedIn
+    </a>
+  </div>
+
+  <Footer />
+</section>

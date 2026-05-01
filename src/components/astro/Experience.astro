@@ -1,0 +1,27 @@
+---
+import { experience } from '../../data/experience';
+import SectionHead from './SectionHead.astro';
+---
+
+<section id="work" class="pf-section">
+  <SectionHead num="02" title="Experience" />
+  <div class="pf-timeline">
+    {
+      experience.map((j) => (
+        <article class="pf-job">
+          <div class="pf-job-dates">{j.dates}</div>
+          <div>
+            <div class="pf-job-role">
+              {j.role} <span class="pf-job-company">· {j.company}</span>
+              <span class="arrow">↗</span>
+            </div>
+            <p class="pf-job-blurb">{j.blurb}</p>
+            <div class="pf-tags">
+              {j.tags.map((t) => <span class="pf-tag">{t}</span>)}
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

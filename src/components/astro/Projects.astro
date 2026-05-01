@@ -1,0 +1,12 @@
+---
+import { projects } from '../../data/projects';
+import SectionHead from './SectionHead.astro';
+import ProjectCard from '../react/ProjectCard';
+---
+
+<section id="projects" class="pf-section">
+  <SectionHead num="03" title="Selected Work" />
+  <div class="pf-projects">
+    {projects.map((p) => <ProjectCard client:visible project={p} />)}
+  </div>
+</section>

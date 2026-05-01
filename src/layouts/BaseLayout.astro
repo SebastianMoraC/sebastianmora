@@ -1,0 +1,75 @@
+---
+import '../styles/global.css';
+import { SITE } from '../consts';
+import CursorSpotlight from '../components/react/CursorSpotlight';
+import ThemeToggle from '../components/react/ThemeToggle';
+
+interface Props {
+  title?: string;
+  description?: string;
+  pathname?: string;
+  ogImage?: string;
+}
+
+const {
+  title = SITE.title,
+  description = SITE.description,
+  pathname = Astro.url.pathname,
+  ogImage,
+} = Astro.props;
+
+const canonical = new URL(pathname, Astro.site ?? SITE.url).toString();
+const og = ogImage ? new URL(ogImage, Astro.site ?? SITE.url).toString() : undefined;
+---
+
+<!doctype html>
+<html lang={SITE.locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    {og && <meta property="og:image" content={og} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {og && <meta name="twitter:image" content={og} />}
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate" type="application/rss+xml" title={SITE.title} href="/rss.xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script is:inline>
+      // Apply persisted theme before paint to avoid FOUC
+      (function () {
+        try {
+          const stored = localStorage.getItem('pf-theme');
+          const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+          const theme = stored ?? (prefersLight ? 'light' : 'dark');
+          if (theme === 'light') document.documentElement.classList.add('is-light');
+        } catch {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="pf-grain" aria-hidden="true"></div>
+    <CursorSpotlight client:load />
+    <ThemeToggle client:load />
+
+    <slot />
+  </body>
+</html>

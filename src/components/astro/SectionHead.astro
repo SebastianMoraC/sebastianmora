@@ -1,0 +1,13 @@
+---
+interface Props {
+  num: string;
+  title: string;
+}
+const { num, title } = Astro.props;
+---
+
+<header class="pf-section-head">
+  <span class="pf-section-num">{num} /</span>
+  <span class="pf-section-title">{title}</span>
+  <span class="pf-section-rule" aria-hidden="true"></span>
+</header>

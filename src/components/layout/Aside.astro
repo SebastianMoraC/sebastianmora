@@ -1,0 +1,36 @@
+---
+import { site, social, nav } from '../../data/site';
+import Icon from './Icon.astro';
+import ScrollSpyNav from '../react/ScrollSpyNav';
+---
+
+<aside class="pf-aside">
+  <div>
+    <div class="pf-name">{site.name}</div>
+    <div class="pf-role">
+      {site.role} <span class="sep">·</span> <span class="company">{site.company}</span>
+    </div>
+    <div class="pf-tagline">{site.asideTagline}</div>
+    <div class="pf-status">
+      <span class="dot" aria-hidden="true"></span>
+      {site.status}
+    </div>
+  </div>
+
+  <ScrollSpyNav client:load items={[...nav]} />
+
+  <div class="pf-socials">
+    <a href={social.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
+      <Icon name="linkedin" />
+    </a>
+    <a href={social.github} target="_blank" rel="noreferrer" aria-label="GitHub">
+      <Icon name="github" />
+    </a>
+    <a href={social.twitter} target="_blank" rel="noreferrer" aria-label="X / Twitter">
+      <Icon name="twitter" />
+    </a>
+    <a href={social.email} aria-label="Email">
+      <Icon name="mail" />
+    </a>
+  </div>
+</aside>

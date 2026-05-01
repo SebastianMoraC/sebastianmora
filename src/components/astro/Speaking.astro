@@ -1,0 +1,21 @@
+---
+import { talks } from '../../data/talks';
+import SectionHead from './SectionHead.astro';
+---
+
+<section id="speaking" class="pf-section">
+  <SectionHead num="04" title="Speaking & Community" />
+  <div class="pf-talks">
+    {
+      talks.map((t) => (
+        <article class="pf-talk">
+          <div class="pf-talk-meta">
+            <span class="pf-talk-event">{t.event}</span>
+            <span>{t.date} · {t.kind}</span>
+          </div>
+          <div class="pf-talk-title">{t.title}</div>
+        </article>
+      ))
+    }
+  </div>
+</section>

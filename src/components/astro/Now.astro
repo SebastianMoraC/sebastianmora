@@ -1,0 +1,27 @@
+---
+import { now } from '../../data/now';
+import SectionHead from './SectionHead.astro';
+import Icon from '../layout/Icon.astro';
+---
+
+<section id="now" class="pf-section">
+  <SectionHead num="06" title="Now" />
+  <div class="pf-now">
+    <div class="pf-now-cell">
+      <div class="pf-now-label"><span class="ico">▲</span> Building</div>
+      <div class="pf-now-text">{now.building}</div>
+    </div>
+    <div class="pf-now-cell">
+      <div class="pf-now-label"><Icon name="book" size={14} /> Reading</div>
+      <div class="pf-now-text">{now.reading}</div>
+    </div>
+    <div class="pf-now-cell">
+      <div class="pf-now-label"><Icon name="music" size={14} /> Listening</div>
+      <div class="pf-now-text">{now.listening}</div>
+    </div>
+    <div class="pf-now-cell">
+      <div class="pf-now-label"><Icon name="spark" size={14} /> Learning</div>
+      <div class="pf-now-text">{now.learning}</div>
+    </div>
+  </div>
+</section>

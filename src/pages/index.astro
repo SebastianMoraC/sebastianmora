@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Container from '../components/layout/Container.astro';
+import Aside from '../components/layout/Aside.astro';
+import Hero from '../components/astro/Hero.astro';
+import About from '../components/astro/About.astro';
+import Experience from '../components/astro/Experience.astro';
+import Projects from '../components/astro/Projects.astro';
+import Speaking from '../components/astro/Speaking.astro';
+import Writing from '../components/astro/Writing.astro';
+import Now from '../components/astro/Now.astro';
+import Contact from '../components/astro/Contact.astro';
+---
+
+<BaseLayout>
+  <Container>
+    <Aside />
+    <main class="pf-main">
+      <Hero />
+      <About />
+      <Experience />
+      <Projects />
+      <Speaking />
+      <Writing />
+      <Now />
+      <Contact />
+    </main>
+  </Container>
+</BaseLayout>

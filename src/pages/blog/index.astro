@@ -1,0 +1,50 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Container from '../../components/layout/Container.astro';
+import Aside from '../../components/layout/Aside.astro';
+import SectionHead from '../../components/astro/SectionHead.astro';
+
+type Post = CollectionEntry<'blog'>;
+
+const all = (await getCollection('blog', ({ data }: Post) => !data.draft)) as Post[];
+const posts = all.sort(
+  (a: Post, b: Post) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<BaseLayout title="Writing — Sebastián Mora Carmona">
+  <Container>
+    <Aside />
+    <main class="pf-main">
+      <section class="pf-section" style="margin-top: 24px;">
+        <SectionHead num="00" title="Blog" />
+
+        {
+          posts.length === 0 ? (
+            <p class="pf-job-blurb" style="max-width: 520px;">
+              No posts yet — long-form notes coming soon. In the meantime, head back to the
+              {' '}<a href="/" style="color: var(--accent);">homepage</a>.
+            </p>
+          ) : (
+            <div class="pf-writing">
+              {posts.map((post: Post) => (
+                <a class="pf-post" href={`/blog/${post.id}`}>
+                  <div class="pf-post-date">
+                    {post.data.pubDate.toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'short',
+                      day: 'numeric',
+                    })}
+                  </div>
+                  <div class="pf-post-title">{post.data.title}</div>
+                  <div class="pf-post-where">Read →</div>
+                </a>
+              ))}
+            </div>
+          )
+        }
+      </section>
+    </main>
+  </Container>
+</BaseLayout>

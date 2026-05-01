@@ -1,0 +1,26 @@
+---
+title: 'DailyBot Multi-Agent System'
+description: 'Production AI agent serving 30k+ weekly users across Slack, Teams, and Discord.'
+year: '2024'
+kind: 'Product · DailyBot'
+stack: ['LangChain', 'LangGraph', 'pgvector', 'RAG', 'LangSmith']
+highlight: "~30% drop in 'I don't understand' responses."
+featured: true
+order: 2
+---
+
+A ReAct loop with intent classification, tool calling, and dynamic routing. RAG over team data via pgvector, with evals tracked through LangSmith.
+
+## Architecture
+
+The system is composed of three main loops:
+
+- **Intent classification** — quickly route to a specialist agent
+- **Tool-calling planner** — pick tools, run them, and synthesize
+- **RAG over team data** — retrieve relevant context grounded in the user's workspace
+
+## Numbers
+
+- 30k+ weekly users
+- 80k+ intents/month
+- ~30% drop in fallback responses
