@@ -3,6 +3,7 @@ import '../styles/global.css';
 import { SITE } from '../consts';
 import CursorSpotlight from '../components/react/CursorSpotlight';
 import ThemeToggle from '../components/react/ThemeToggle';
+import Analytics from '@vercel/analytics/astro';
 
 interface Props {
   title?: string;
@@ -71,5 +72,6 @@ const og = ogImage ? new URL(ogImage, Astro.site ?? SITE.url).toString() : undef
     <ThemeToggle client:load />
 
     <slot />
+    <Analytics />
   </body>
 </html>
