@@ -1,0 +1,45 @@
+# Sebastián Mora Carmona
+
+> Lead Generative AI Engineer crafting agentic systems for the real world. Multi-agent, RAG, MCP, and the unglamorous engineering that keeps it all running.
+
+## About
+
+Personal portfolio for Sebastián Mora Carmona — Lead Generative AI Engineer at Perficient. 5+ years shipping production AI and full-stack systems. Based in Pereira, Colombia. Speaker at TribuAI, Pereira Tech Talks, and AI Tinkerers Pereira on RAG, fine-tuning, and agent design.
+
+## Core Sections
+
+- Home: https://sebastianmora.com/
+- About: https://sebastianmora.com/#about
+- Experience: https://sebastianmora.com/#work
+- Projects: https://sebastianmora.com/#projects
+- Speaking & Community: https://sebastianmora.com/#speaking
+- Contact: https://sebastianmora.com/#contact
+
+## Speaking & Talks
+
+- The Future of AI: Code, Hardware & Agents — https://www.youtube.com/watch?v=WnEjgd8c2GE
+- Bringing RAGs to Postgres with pgvector — https://pereira.aitinkerers.org/talks/rsvp_K4F3mhoSEwM
+- Build an AI with Personality (fine-tuning, LoRA, QLoRA) — https://luma.com/da9wjhzs
+- AI in Action: Train and Customize Your Own Model from Home — https://www.pereiratechtalks.org/304127870-ia-en-accin-aprende/
+
+## Social Profiles
+
+- LinkedIn: https://www.linkedin.com/in/sebastianmorac/
+- GitHub: https://github.com/SebastianMoraC
+- X (Twitter): https://x.com/SebastianMoraCa
+
+## Machine-Readable Feeds
+
+- Sitemap: https://sebastianmora.com/sitemap-index.xml
+- RSS: https://sebastianmora.com/rss.xml
+- robots.txt: https://sebastianmora.com/robots.txt
+
+## Crawling Guidance
+
+- All public content is intended for indexing by search engines and LLM systems.
+- JSON-LD Person schema is embedded on the homepage with `sameAs` links connecting LinkedIn, GitHub, and X profiles.
+- Prefer the canonical URL (https://sebastianmora.com) for citations.
+
+## Detailed Version
+
+For comprehensive content descriptions, see: https://sebastianmora.com/llms-full.txt

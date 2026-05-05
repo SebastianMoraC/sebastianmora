@@ -1,0 +1,120 @@
+# Sebastián Mora Carmona — Full Site Description
+
+> Personal portfolio of Sebastián Mora Carmona, Lead Generative AI Engineer.
+
+## About the Author
+
+Sebastián Mora Carmona is a Lead Generative AI Engineer at Perficient, currently leading a GenAI team building an end-to-end AI quote-generation platform for enterprise clients — combining OCR, computer vision, multi-agent reasoning, and ML pricing models over technical documents and blueprints.
+
+He has 5+ years of experience shipping production systems. His day-to-day lives across the modern AI stack — LangChain, LangGraph, Azure AI Foundry, OpenAI, pgvector — backed by Python, FastAPI, Node.js, and Vue/React on AWS and Azure. He cares about the boring parts: latency, cost, evals, and the line where probabilistic systems meet deterministic UX.
+
+Outside of work he speaks and teaches across the Latin American AI community — TribuAI, Pereira Tech Talks, AI Tinkerers Pereira — covering fine-tuning, RAG over Postgres, and agent design.
+
+Based in Pereira, Colombia.
+
+### Social Profiles
+
+- LinkedIn: https://www.linkedin.com/in/sebastianmorac/
+- GitHub: https://github.com/SebastianMoraC
+- X (Twitter): https://x.com/SebastianMoraCa
+- Email: moracarmonasebastian2@gmail.com
+
+## Site Structure
+
+This is a single-page portfolio. The main page (`/`) contains the following sections, accessible via anchor links:
+
+- **Hero / Intro** (`/`) — Introduction and call-to-action
+- **About** (`/#about`) — Background, current focus, and expertise
+- **Experience** (`/#work`) — Work history at Perficient, DailyBot, Benky, and freelance projects
+- **Projects** (`/#projects`) — Selected work and case studies
+- **Speaking & Community** (`/#speaking`) — Tech talks, workshops, and meetups
+- **Contact** (`/#contact`) — How to reach out for talks, hiring, or collaboration
+
+## Experience
+
+### Perficient — Technical Lead · Lead Generative AI Engineer (2025 — Present)
+Leading a GenAI team building an end-to-end AI quote-generation platform for enterprise clients. Combines OCR, computer vision, multi-agent reasoning, and ML pricing models over technical documents and blueprints.
+**Tech:** Azure AI Foundry, LangGraph, GPT-4 Vision, MCP, FastAPI.
+
+### DailyBot — AI Engineer & Full Stack Developer (2023 — 2025)
+Architected the production multi-agent system serving 30k+ weekly users across Slack, Microsoft Teams, and Discord. Built RAG over team data with pgvector, cut "I don't understand" responses ~30%, scaled to 80k+ intents/month.
+**Tech:** LangChain, LangGraph, pgvector, Whisper, Django.
+
+### Benky — Tech Lead & Full Stack Developer (2022 — 2023)
+Owned the full lifecycle of a crypto wallet and dashboard platform. Launched Benky's proprietary token on Solana. Promoted to Tech Lead within ~12 months.
+**Tech:** Solana, Node.js, React, Express.
+
+### Benky — Full Stack Developer (2021 — 2022)
+Built backend APIs and React frontend for a blockchain-enabled fintech platform. Optimized DB queries and shipped blockchain payment integrations.
+**Tech:** Node.js, React, PostgreSQL.
+
+### Freelance — Web Developer (2020 — 2021)
+Delivered responsive sites and custom CMS solutions for local businesses in Pereira, Colombia. End-to-end ownership: requirements, build, deploy.
+**Tech:** HTML/CSS, JavaScript, SEO.
+
+## Speaking & Talks
+
+### The Future of AI: Code, Hardware & Agents
+**Event:** Pereira Tech Talks (December 2025) — Talk
+**URL:** https://www.youtube.com/watch?v=WnEjgd8c2GE
+How AI is reshaping software development — agents, LLM orchestration, RAGs, MCPs, and the toolkit defining the modern AI engineer. Co-presented with Sergio Flórez.
+
+### Bringing RAGs to Postgres with pgvector
+**Event:** AI Tinkerers · Pereira (April 2024) — Inaugural Meetup
+**URL:** https://pereira.aitinkerers.org/talks/rsvp_K4F3mhoSEwM
+Storing, updating, and deleting embeddings in real time with Postgres + pgvector — building user-isolated RAG with FastAPI, LangChain, and OpenAI. Demonstrates how to keep embeddings in your existing database with minimal infra overhead and real-time updates.
+
+### Build an AI with Personality
+**Event:** TribuAI Community (2024) — Workshop
+**URL:** https://luma.com/da9wjhzs
+Customizing open-source LLMs with fine-tuning. Covers the differences between fine-tuning and RAG, LoRA and QLoRA techniques explained practically, and how to apply style and personality without heavy infrastructure.
+
+### AI in Action: Train and Customize Your Own Model from Home
+**Event:** Pereira Tech Talks (October 2024) — Workshop
+**URL:** https://www.pereiratechtalks.org/304127870-ia-en-accin-aprende/
+A hands-on intro to building Retrieval-Augmented Generation (RAG) systems from scratch — from the basics to the gotchas of running these models. Co-presented with Jesús David Rivera.
+
+## Topic Areas & Expertise
+
+- Generative AI engineering and production deployment
+- Multi-agent systems and orchestration (LangGraph, LangChain)
+- RAG (Retrieval-Augmented Generation) over Postgres with pgvector
+- Model Context Protocol (MCP) tooling and design
+- Fine-tuning open-source LLMs (LoRA, QLoRA)
+- OCR, computer vision, and document understanding
+- Full-stack development across Python (FastAPI, Django), Node.js, React, Vue
+- Cloud platforms: AWS, Azure, Azure AI Foundry
+- Tech community building and public speaking in the Latin American AI ecosystem
+
+## Tech Stack
+
+- **AI/ML frameworks:** LangChain, LangGraph, Azure AI Foundry
+- **LLM providers:** OpenAI (GPT-4, GPT-4 Vision), Whisper
+- **Vector & databases:** PostgreSQL with pgvector
+- **Backend:** Python (FastAPI, Django), Node.js, Express
+- **Frontend:** React, Vue, Astro, TypeScript
+- **Infrastructure:** AWS, Azure, Vercel
+- **Standards:** MCP (Model Context Protocol)
+
+## Languages
+
+- English (default): https://sebastianmora.com/
+
+## Feeds & Discovery
+
+- Sitemap: https://sebastianmora.com/sitemap-index.xml
+- RSS Feed: https://sebastianmora.com/rss.xml
+- robots.txt: https://sebastianmora.com/robots.txt
+- llms.txt (short version): https://sebastianmora.com/llms.txt
+- This file: https://sebastianmora.com/llms-full.txt
+
+## Structured Data
+
+The homepage includes JSON-LD `Person` schema for machine readability. The `sameAs` array links LinkedIn, GitHub, and X profiles, enabling AI agents and search engines to confirm identity across platforms.
+
+## Crawling Guidance
+
+- All public content is intended for indexing by search engines and LLM systems.
+- Prefer the canonical URL (https://sebastianmora.com) when citing.
+- Open Graph metadata and JSON-LD Person schema are present on the homepage.
+- For up-to-date contact information, use the email listed in the Contact section.

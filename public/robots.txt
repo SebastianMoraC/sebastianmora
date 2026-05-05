@@ -1,4 +1,54 @@
+# robots.txt for sebastianmora.com
+# https://sebastianmora.com
+
+# Default: allow all crawlers
 User-agent: *
 Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
+# Sitemap location
 Sitemap: https://sebastianmora.com/sitemap-index.xml
+
+# LLM guidance files
+# https://sebastianmora.com/llms.txt
+# https://sebastianmora.com/llms-full.txt
+
+# AI/LLM Crawlers — explicitly allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
