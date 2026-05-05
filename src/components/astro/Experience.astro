@@ -12,7 +12,19 @@ import SectionHead from './SectionHead.astro';
           <div class="pf-job-dates">{j.dates}</div>
           <div>
             <div class="pf-job-role">
-              {j.role} <span class="pf-job-company">· {j.company}</span>
+              {j.role}{' '}
+              {j.companyUrl ? (
+                <a
+                  class="pf-job-company pf-job-company-link"
+                  href={j.companyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  · {j.company}
+                </a>
+              ) : (
+                <span class="pf-job-company">· {j.company}</span>
+              )}
               <span class="arrow">↗</span>
             </div>
             <p class="pf-job-blurb">{j.blurb}</p>

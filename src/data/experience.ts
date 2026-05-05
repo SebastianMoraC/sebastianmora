@@ -1,5 +1,6 @@
 export interface Job {
   company: string;
+  companyUrl?: string;
   role: string;
   dates: string;
   location: string;
@@ -10,6 +11,7 @@ export interface Job {
 export const experience: ReadonlyArray<Job> = [
   {
     company: 'Perficient',
+    companyUrl: 'https://www.perficient.com/',
     role: 'Technical Lead · Lead Generative AI Engineer',
     dates: '2025 — Present',
     location: 'Remote',
@@ -19,6 +21,7 @@ export const experience: ReadonlyArray<Job> = [
   },
   {
     company: 'DailyBot',
+    companyUrl: 'https://www.dailybot.com/',
     role: 'AI Engineer & Full Stack Developer',
     dates: '2023 — 2025',
     location: 'Remote',
@@ -28,6 +31,7 @@ export const experience: ReadonlyArray<Job> = [
   },
   {
     company: 'Benky',
+    companyUrl: 'https://benkypayments.com/',
     role: 'Tech Lead & Full Stack Developer',
     dates: '2022 — 2023',
     location: 'Pereira, CO',
@@ -37,6 +41,7 @@ export const experience: ReadonlyArray<Job> = [
   },
   {
     company: 'Benky',
+    companyUrl: 'https://benkypayments.com/',
     role: 'Full Stack Developer',
     dates: '2021 — 2022',
     location: 'Pereira, CO',

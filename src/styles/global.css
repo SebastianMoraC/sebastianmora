@@ -706,6 +706,12 @@ body {
   font-weight: 500;
   line-height: 1.35;
 }
+.pf-job-company-link {
+  text-decoration: none;
+  color: var(--fg-2);
+  transition: color 180ms ease;
+}
+.pf-job-company-link:hover { color: var(--accent); }
 
 /* ============================================================
    Writing
