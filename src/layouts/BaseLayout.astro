@@ -79,13 +79,13 @@ const personJsonLd = {
     />
 
     <script is:inline>
-      // Apply persisted theme before paint to avoid FOUC
+      // Apply persisted theme before paint to avoid FOUC. Default is dark;
+      // only switch to light if the user explicitly chose it.
       (function () {
         try {
-          const stored = localStorage.getItem('pf-theme');
-          const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-          const theme = stored ?? (prefersLight ? 'light' : 'dark');
-          if (theme === 'light') document.documentElement.classList.add('is-light');
+          if (localStorage.getItem('pf-theme') === 'light') {
+            document.documentElement.classList.add('is-light');
+          }
         } catch {}
       })();
     </script>
