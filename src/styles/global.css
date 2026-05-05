@@ -706,6 +706,16 @@ body {
   font-weight: 500;
   line-height: 1.35;
 }
+.pf-talk-link { text-decoration: none; color: inherit; }
+.pf-talk-link:hover .pf-talk-title { color: var(--accent); }
+.pf-talk-arrow {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 13px;
+  color: var(--fg-3);
+  transition: transform 200ms ease;
+}
+.pf-talk-link:hover .pf-talk-arrow { transform: translate(2px, -2px); color: var(--accent); }
 .pf-job-company-link {
   text-decoration: none;
   color: var(--fg-2);

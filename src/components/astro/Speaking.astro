@@ -7,15 +7,30 @@ import SectionHead from './SectionHead.astro';
   <SectionHead num="04" title="Speaking & Community" />
   <div class="pf-talks">
     {
-      talks.map((t) => (
-        <article class="pf-talk">
-          <div class="pf-talk-meta">
-            <span class="pf-talk-event">{t.event}</span>
-            <span>{t.date} · {t.kind}</span>
-          </div>
-          <div class="pf-talk-title">{t.title}</div>
-        </article>
-      ))
+      talks.map((t) =>
+        t.href ? (
+          <a
+            class="pf-talk pf-talk-link"
+            href={t.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="pf-talk-meta">
+              <span class="pf-talk-event">{t.event}</span>
+              <span>{t.date} · {t.kind}</span>
+            </div>
+            <div class="pf-talk-title">{t.title} <span class="pf-talk-arrow">↗</span></div>
+          </a>
+        ) : (
+          <article class="pf-talk">
+            <div class="pf-talk-meta">
+              <span class="pf-talk-event">{t.event}</span>
+              <span>{t.date} · {t.kind}</span>
+            </div>
+            <div class="pf-talk-title">{t.title}</div>
+          </article>
+        )
+      )
     }
   </div>
 </section>
