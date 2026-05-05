@@ -1,4 +1,4 @@
-# sebastianmora.dev
+# sebastianmora.com
 
 Personal portfolio for **Sebastián Mora Carmona — Lead Generative AI Engineer.**
 Built with Astro 6 + React 19 islands + Tailwind CSS 4. Deploys statically to Vercel.
@@ -126,7 +126,7 @@ vercel --prod       # deploy to production
 
 ### Custom domain
 
-In the Vercel dashboard → **Settings → Domains**, add `sebastianmora.dev`. Update the
+In the Vercel dashboard → **Settings → Domains**, add `sebastianmora.com`. Update the
 `SITE.url` value in `src/consts.ts` if you change domains so OG/RSS/canonical URLs resolve
 correctly.
 
