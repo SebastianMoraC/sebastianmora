@@ -20,6 +20,7 @@ import SectionHead from './SectionHead.astro';
               <span>{t.date} · {t.kind}</span>
             </div>
             <div class="pf-talk-title">{t.title} <span class="pf-talk-arrow">↗</span></div>
+            {t.description && <p class="pf-talk-description">{t.description}</p>}
           </a>
         ) : (
           <article class="pf-talk">
@@ -28,6 +29,7 @@ import SectionHead from './SectionHead.astro';
               <span>{t.date} · {t.kind}</span>
             </div>
             <div class="pf-talk-title">{t.title}</div>
+            {t.description && <p class="pf-talk-description">{t.description}</p>}
           </article>
         )
       )

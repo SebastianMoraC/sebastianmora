@@ -709,6 +709,13 @@ body {
 }
 .pf-talk-link { text-decoration: none; color: inherit; }
 .pf-talk-link:hover .pf-talk-title { color: var(--accent); }
+.pf-talk-description {
+  font-size: 13px;
+  color: var(--fg-2);
+  line-height: 1.55;
+  margin: 0;
+  max-width: 580px;
+}
 .pf-talk-arrow {
   display: inline-block;
   margin-left: 4px;
