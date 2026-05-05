@@ -41,6 +41,5 @@ export const nav: ReadonlyArray<NavItem> = [
   { id: 'work', label: 'Work' },
   { id: 'projects', label: 'Projects' },
   { id: 'speaking', label: 'Speaking' },
-  { id: 'writing', label: 'Writing' },
   { id: 'contact', label: 'Contact' },
 ];
