@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { SITE } from '../consts';
+import { site, social } from '../data/site';
 import CursorSpotlight from '../components/react/CursorSpotlight';
 import ThemeToggle from '../components/react/ThemeToggle';
 import Analytics from '@vercel/analytics/astro';
@@ -21,6 +22,19 @@ const {
 
 const canonical = new URL(pathname, Astro.site ?? SITE.url).toString();
 const og = new URL(ogImage, Astro.site ?? SITE.url).toString();
+
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: site.name,
+  jobTitle: site.role,
+  url: SITE.url,
+  image: new URL('/apple-touch-icon.png', SITE.url).toString(),
+  email: site.email,
+  worksFor: { '@type': 'Organization', name: site.company },
+  address: { '@type': 'PostalAddress', addressLocality: 'Pereira', addressCountry: 'CO' },
+  sameAs: [social.linkedin, social.github, social.twitter],
+};
 ---
 
 <!doctype html>
@@ -32,6 +46,7 @@ const og = new URL(ogImage, Astro.site ?? SITE.url).toString();
 
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="author" content={site.name} />
     <link rel="canonical" href={canonical} />
 
     <meta property="og:type" content="website" />
@@ -53,6 +68,8 @@ const og = new URL(ogImage, Astro.site ?? SITE.url).toString();
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="alternate" type="application/rss+xml" title={SITE.title} href="/rss.xml" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(personJsonLd)} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
